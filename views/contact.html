@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        .item {
+            margin: 20px;
+        }
+        .ye{
+          font-size: 25px;
+        }
+    
+        .heading {
+            text-align: center;
+            margin-top: 42px;
+            font-size: 60px;
+            color: #F1D4E5;
+            font-family: 'Righteous', cursive;
+        }
+    
+        .items {
+            font-size: 24px;
+            color: #F1D4E5;
+            font-family: 'Righteous', cursive;
+        }
+    
+        .btn {
+            font-size: 24px;
+            color: #fff;
+            font-family: 'Righteous', cursive;
+        }
+    
+        .detail {
+            height: 80px;
+        }
+    
+        .container {
+            font-family: 'Montserrat', sans-serif; /* Updated font family */
+            display: flex;
+            justify-content: flex-end;
+            margin-right: 180px;
+            align-items: center;
+            min-height: 100vh;
+        }
+    
+        .form-container {
+            width: 50%;
+            background-color: white;
+            padding: 15px;
+            margin-right: 100px;
+        }
+    
+        body {
+            background: url(redp.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center left;
+        }
+
+        #suggestion{
+            color: black;
+            font-family: 'Righteous', cursive;
+            font-size: 24px;
+
+        }
+
+        #report{
+            color: black;
+            font-family: 'Righteous', cursive;
+            font-size: 20px;
+        }
+        .showcase {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  color: #fff;
+  transition: 0.7s;
+  z-index: 2;
+}
+
+.showcase header{
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+padding: 40px 100px;
+z-index: 1000;
+display: flex;
+align-items: center;
+justify-content: space-between;
+}
+
+.showcase.active {
+  right: 300px;
+}
+
+.showcase video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.7;
+  filter: blur(0.6px);
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(0,0,0,0.7);
+  mix-blend-mode: overlay;
+}
+
+@media only screen and (max-width:777px){
+    .heading{
+        font-size: 55px;
+        text-decoration: underline;
+        color: black;
+    }
+
+    .btn-success{
+        margin-left: 140px;
+    }
+
+    .form-control{
+        height: 40%;
+        width: 80%;
+    }
+}
+
+
+    </style>
+    
+    
+    
+    
+    
+    
+
+    
+</head>
+<body>
+  <section class="lowcase">
+  <header>
+
+  </header>
+    <div class="container" >
+        <form action="/contact" method="post" >
+            <div class="mb-3 item">
+                <h1 class = "heading">CONTACT US</h1>
+            </div>
+
+            <div class="mb-3 item">
+                <label for="exampleInputEmail1" class="form-label items"  id = "email">Email address</label>
+                <input type="text" name="email" class="form-control" id="email" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3 item">
+                <label for="exampleInputEmail1" class="form-label items"  id = "fname">Name</label>
+                <input type="text" name="name" class="form-control" id="fname" aria-describedby="emailHelp">
+            </div>
+
+            <div class="mb-3 item">
+                <label for="exampleInputEmail1" class="form-label items"  id = "number">Phone number</label>
+                <input type="text" name="phone" class="form-control" id="number" aria-describedby="emailHelp">
+            </div>
+
+            <div class="input-group item">
+                <span class="input-group-text"  id = "suggestion">Suggestions</span>
+                <textarea name="suggestion" class="form-control detail" aria-label="With textarea" ></textarea>
+            </div>
+
+            <div class="input-group item">
+                <span class="input-group-text"  id = "report">Report An Issue</span>
+                <textarea class="form-control detail" name="feedback" aria-label="With textarea" id = "feedback"></textarea>
+            </div>
+
+            <div class="mb-3 item" id = "item-main">
+                <button type="submit" class="btn btn-success" id = "submit">Submit</button>
+            </div>
+
+
+        </form>
+    </div>
+
+  </section>
+
+    <script>
+      const menuToggle = document.querySelector('.toggle')
+      const showcase = document.querySelector('.showcase')
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+      })
+  
+        
+        
+    </script>
+
+    
+</body>
+</html>

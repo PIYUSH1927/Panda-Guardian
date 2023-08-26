@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css"/>
+    <title>Panda Guardians</title>
+  </head>
+
+  <body>
+    <section class="showcase">
+      <header>
+        <h2 class="logo"><a href="#"><img src="logo1.svg" alt="logo_img" width="30" height="20"></a>Panda Guardians&nbsp; </h2>
+        <div class="toggle"></div>
+      </header>
+     <video src = "redPanda.mp4" muted loop autoplay></video>
+
+      <div class="overlay"></div>
+
+      <div class="text">
+        <h2>Help us save Red Pandas</h2>
+        <br>
+        <p>Almost 50% of the red panda’s habitat is in the Eastern Himalayas. The loss of nesting trees and bamboo is causing a decline in red panda populations across much of their range because their forest home is being cleared.</p>
+        <span>
+          <a href="https://secure.wcs.org/donate/adopt-red-panda?gclid=Cj0KCQjwj_ajBhCqARIsAA37s0ylYus67tAR7BaKPabeAX4SFraO3VDtqWAcvXBvztFYWOEwgM0JcE4aArhrEALw_wcB">Adopt</a>
+    
+          <a href=https://sequoia-park-zoo-foundation.networkforgood.com/projects/169560-support-international-red-panda-day style="margin-left: 16px; background-color: rgb(235, 225, 44);">Donate</a>
+        </span>
+
+          </div>
+        </div>
+      
+
+      <ul class="social">
+        <li><a href="#"><img src="facebook.png" alt="facebok_img"></a></li>
+        <li><a href="#"><img src="twitter.png" alt="twitter_img"></a></li>
+        <li><a href="#"><img src="instagram.png" alt="instagram_img"></a></li>
+      </ul>
+    </section>
+
+    <div class="menu">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <br>
+        <li><a   href="https://www.ndtv.com/topic/red-pandas">News & Press</a></li><br>
+        <li><a  href="/facts">Facts</a></li><br>
+        <li><a  href="https://www.nwf.org/About-Us/Careers">Careers</a></li><br>
+        <li><a  href="/about">About-Us</a></li><br>
+        <li><a  href="/Statistics">Statistics</a></li><br>
+        <li><a  href="/contact">Contact-Us</a></li><br>
+      </ul>
+    </div>
+
+    <script>
+      const menuToggle = document.querySelector('.toggle')
+      const showcase = document.querySelector('.showcase')
+
+      menuToggle.addEventListener('click', () => {
+        menuToggle.classList.toggle('active')
+        showcase.classList.toggle('active')
+      })
+    </script>
+  </body>
+  
+</html>

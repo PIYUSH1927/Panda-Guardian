@@ -1,0 +1,23 @@
+.st{
+    font-weight: bold;
+    font-size: 55px;
+    position: relative;
+    left: 105px;
+}
+
+.gg{
+    color: greenyellow;
+}
+.gr{
+    font-weight: bold;
+}
+body{
+    font-family:cursive;
+    background-color: bisque;
+}
+
+@media only screen and ( max-width: 777px){
+    .st{
+        left:55px;
+    }
+}

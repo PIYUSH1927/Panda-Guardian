@@ -6,16 +6,19 @@ const bodyParser = require('body-parser');
 const app = express();
 const path = require('path');
 
+const DB = 'mongodb+srv://padiapiyush12:newpassword12@cluster0.yyfi1gd.mongodb.net/pddata?retryWrites=true&w=majority'
 
 app.use(express.static('public'));
  
 app.use(bodyParser.urlencoded({ extended:true }));
 
 
-mongoose.connect("mongodb://127.0.0.1/pddata", {
+mongoose.connect(DB, {
   useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+  useUnifiedTopology: true,
+}).then(()=>{
+  console.log(`connection successful`);
+}).catch((err)=>console.log(`no connection`));
 
 const db = mongoose.connection;
 
